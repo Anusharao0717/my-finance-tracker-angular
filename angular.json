@@ -1,0 +1,24 @@
+{
+ "$schema":"./node_modules/@angular/cli/lib/config/schema.json",
+ "version":1,"newProjectRoot":"projects",
+ "projects":{"my-finance-tracker":{"projectType":"application","root":"","sourceRoot":"src","prefix":"app",
+ "architect":{"build":{"builder":"@angular-devkit/build-angular:application","options":{"outputPath":"dist/my-finance-tracker","index":"src/index.html","browser":"src/main.ts","polyfills":["zone.js"],"tsConfig":"tsconfig.app.json","assets":[{"glob":"**/*","input":"public"}],"styles":["src/styles.css"],"scripts":[]},"configurations":{"production":{"budgets":[{"type":"initial","maximumWarning":"1.5mb","maximumError":"3mb"},{"type":"anyComponentStyle","maximumWarning":"20kb","maximumError":"30kb"}],"outputHashing":"all"},"development":{"optimization":false,"extractLicenses":false,"sourceMap":true}},"defaultConfiguration":"production"},
+"serve": {
+  "builder": "@angular-devkit/build-angular:dev-server",
+  "configurations": {
+    "production": {
+      "buildTarget": "my-finance-tracker:build:production"
+    },
+    "development": {
+      "buildTarget": "my-finance-tracker:build:development"
+    }
+  },
+  "defaultConfiguration": "development"
+}
+}
+}
+},
+"cli": {
+"analytics": "27631e00-084b-425a-bc4c-759cd2b452ba"
+}
+}
